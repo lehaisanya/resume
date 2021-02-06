@@ -1,0 +1,10 @@
+.nameTitle {
+    color: azure !important;
+    display: inline-block;
+}
+
+@media (max-width: 480px) {
+    .nameTitle {
+        font-size: 15px !important;
+    }
+}

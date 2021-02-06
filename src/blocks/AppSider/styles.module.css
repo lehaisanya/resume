@@ -1,0 +1,20 @@
+.avatar {
+    margin: 0 20px !important;
+    z-index: 1;
+}
+
+.infoLineIcon {
+    font-size: 24px;
+}
+
+.infoSectionTitle {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.sider {
+    max-width: 220px;
+    margin: 0 auto;
+    padding: 15px;
+}
