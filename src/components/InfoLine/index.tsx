@@ -1,20 +1,17 @@
-import React, { FC, ReactElement } from 'react'
-import { Space, Typography } from 'antd'
-
-import styles from './styles.module.css'
-
-const { Text } = Typography
+import Space from 'antd/lib/space'
+import Text from 'antd/lib/typography/Text'
+import React, { FC, ReactNode } from 'react'
 
 interface InfoLineProps {
-    icon: ReactElement
+    icon: ReactNode
     title: string,
-    children: string
+    children: ReactNode
 }
 
 const InfoLine: FC<InfoLineProps> = ({ icon, title, children }) => {
     return (
         <div>
-            <Space align="center" className={styles.infoLine} >
+            <Space align="center">
                 {icon}
                 <div>
                     <div><Text strong>{title}</Text></div>

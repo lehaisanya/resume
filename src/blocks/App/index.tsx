@@ -1,20 +1,19 @@
-import React, { useState, useEffect, Fragment } from 'react'
-import { Layout, Grid } from 'antd'
-
-import { LangContext } from 'lang'
-
+import React, { useState, useEffect } from 'react'
+import Layout from 'antd/lib/layout'
+import Drawer from 'antd/lib/drawer'
+import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint'
 import AppHeader from 'blocks/AppHeader'
 import AppSider from 'blocks/AppSider'
 import AppContent from 'blocks/AppContent'
-
-import styles from './styles.module.css'
+import { LangContext } from 'lang'
 import { LangType } from 'types'
-
-const { Header, Sider, Content } = Layout
+import styles from './styles.module.css'
+import Sider from 'antd/lib/layout/Sider'
+import { Header, Content } from 'antd/lib/layout/layout'
 
 function App() {
     const [lang, setLang] = useState<LangType>('ua')
-    const { md } = Grid.useBreakpoint()
+    const { md } = useBreakpoint()
     const isMiddle = !!md
     const [collapsed, setCollapsed] = useState<boolean>(!md)
 
@@ -37,17 +36,26 @@ function App() {
                     <AppHeader toggleCollapsed={toggleCollapsed} />
                 </Header>
                 <Layout className={styles.contentLayout}>
-                    {isMiddle ? <Fragment>
+                    {isMiddle ? 
                         <Sider theme='light' width={220} className={styles.sider}>
-                            <AppSider />
+                            
+                                <AppSider />
+                            
                         </Sider>
-                        
-                        <Content className={styles.content}>
-                            <AppContent />
-                        </Content>
-                    </Fragment> : collapsed ? <Content className={styles.content}>
-                            <AppContent />
-                        </Content> : <AppSider /> }
+                    : 
+                        <Drawer
+                            style={{ padding: 0 }}
+                            placement="left"
+                            visible={!collapsed}
+                            onClose={toggleCollapsed}
+                        >
+                            <AppSider />
+                        </Drawer>
+                    }
+
+                    <Content className={styles.content}>
+                        <AppContent />
+                    </Content>
                 </Layout>
             </Layout>
         </LangContext.Provider>

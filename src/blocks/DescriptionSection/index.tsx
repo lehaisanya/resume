@@ -1,9 +1,8 @@
 import React from 'react'
 import AppSection from 'components/AppSection'
-import { Typography } from 'antd'
 import { useDict } from 'lang'
+import Title from 'antd/lib/typography/Title'
 
-const { Title } = Typography
 
 function DescriptionSection() {
     const { description } = useDict()

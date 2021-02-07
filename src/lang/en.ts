@@ -27,10 +27,24 @@ const lang: Lang = {
         telegram: '@lehaisanya',
         email: 'lehaisanya@gmail.com',
     },
+    languages: [
+        {
+            name: 'Ukrainian',
+            level: 'Native'
+        },
+        {
+            name: 'Russian',
+            level: 'С1'
+        },
+        {
+            name: 'English',
+            level: 'B1'
+        }
+    ],
     description: {
         title: 'React FrontEnd Developer',
         salary: 'Expected salary from $600',
-        text: `I know how to program well. I have been developing for 6 years. Independently studied various programming languages, such as Lua, Haskell, C++, Python. At the moment I settled on Javascript and Typescript. I know the peculiarities of languages thoroughly, because I once wrote my superstructure with typification for Lua. I just like it. I am quite confident in OOP, REST API and other architectural principles. I am looking for a place where it will be interesting and easy to work, with the opportunity to improve their skills in any direction. Able to learn quickly and constantly engage in self-education.`
+        text: `I have been developing for 6 years. Independently studied various programming languages, such as Lua, Haskell, C++, Python. At the moment I settled on Javascript and Typescript. I know the peculiarities of languages thoroughly, because I once wrote my superstructure with typification for Lua. I just like it. I am quite confident in OOP, REST API and other architectural principles. I am looking for a place where it will be interesting and easy to work, with the opportunity to improve their skills in any direction. Able to learn quickly and constantly engage in self-education.`
     },
     educations: [
         {
@@ -48,7 +62,7 @@ const lang: Lang = {
         {
             start: 'September 2018',
             end: 'NOW',
-            educ: 'Bachelor - Software Engineering (not finished)',
+            educ: 'Bachelor - Software Engineering',
             place: 'State University of Telecommunications, Kyiv, Ukraine',
             extra: '5th year (last)'
         }
@@ -68,7 +82,7 @@ const lang: Lang = {
     skills: [
         {
             name: 'JavaScript (ES6)',
-            level: SkillLevel.Advanced
+            level: SkillLevel.Professional
         },
         {
             name: 'Node.js (Express)',
@@ -122,12 +136,14 @@ const lang: Lang = {
         {
             name: 'Resume',
             description: `The same project, for example.`,
-            technologies: ['React', 'Typescript']
+            technologies: ['React', 'Typescript', 'Antd'],
+            link: 'https://github.com/lehaisanya/resume'
         },
         {
             name: 'Articles Here',
             description: `Online article editor. Test project for portfolio. In it I demonstrate my knowledge of React/Redux technologies. A full-fledged project at MERN. Currently under development.`,
-            technologies: ['React', 'Redux', 'MongoDB', 'Node.js', 'Typescript'],
+            technologies: ['React', 'Redux', 'MongoDB', 'Node.js', 'Typescript', 'Antd'],
+            link: 'https://github.com/lehaisanya/articles-here',
             inProgress: true
         }
     ]

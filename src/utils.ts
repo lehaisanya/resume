@@ -8,13 +8,3 @@ export function toPercent(level: SkillLevel): number {
         case SkillLevel.Professional: return 100
     }
 }
-
-export function toDesk(level: SkillLevel): string {
-    switch (level) {
-        case SkillLevel.Basic: return 'basic'
-        case SkillLevel.Confident: return 'confident'
-        case SkillLevel.Advanced: return 'advanced'
-        case SkillLevel.Professional: return 'professional'
-    }
-}
-

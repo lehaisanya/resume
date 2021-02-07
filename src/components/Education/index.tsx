@@ -1,9 +1,8 @@
+import Col from 'antd/lib/col'
+import Row from 'antd/lib/row'
+import Text from 'antd/lib/typography/Text'
 import React, { FC } from 'react'
-import { Row, Col, Typography } from 'antd'
-
 import { EducationData } from 'types'
-
-const { Text } = Typography
 
 interface EducationProps {
     data: EducationData

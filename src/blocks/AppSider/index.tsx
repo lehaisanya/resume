@@ -1,35 +1,31 @@
 import React from 'react'
-import { Avatar, Typography } from 'antd'
-import {
-    CalendarOutlined, EnvironmentOutlined, HomeOutlined,
-    InstagramOutlined, MailOutlined, PhoneOutlined,
-    UserOutlined
-} from '@ant-design/icons'
-
+import Avatar from 'antd/lib/avatar'
+import Row from 'antd/lib/row'
+import Col from 'antd/lib/col'
 import InfoLine from 'components/InfoLine'
-
-import avatar from 'assets/avatar.jpg'
-import styles from './styles.module.css'
 import { useDict } from 'lang'
-
-const { Title } = Typography
+import styles from './styles.module.css'
+import avatar from 'assets/avatar.png'
+import Title from 'antd/lib/typography/Title'
+import Text from 'antd/lib/typography/Text'
 
 const icons = {
-    name: <UserOutlined className={styles.infoLineIcon} />,
-    birthday: <CalendarOutlined className={styles.infoLineIcon}/>,
-    place: <EnvironmentOutlined className={styles.infoLineIcon}/>,
-    address: <HomeOutlined className={styles.infoLineIcon}/>,
-    telephone: <PhoneOutlined className={styles.infoLineIcon}/>,
-    telegram: <InstagramOutlined className={styles.infoLineIcon}/>,
-    email: <MailOutlined className={styles.infoLineIcon}/>
+    name: <i className={"fi fi-rr-user " + styles.infoLineIcon} />,
+    birthday: <i className={"fi fi-rr-calendar " + styles.infoLineIcon} />,
+    place: <i className={"fi fi-rr-marker " + styles.infoLineIcon} />,
+    telephone: <i className={"fi fi-rr-smartphone " + styles.infoLineIcon} />,
+    telegram: <i className={"fi fi-rr-paper-plane " + styles.infoLineIcon} />,
+    email: <i className={"fi fi-rr-envelope " + styles.infoLineIcon} />
 }
 
 function AppSider() {
-    const { personal, words } = useDict()
+    const { personal, words, languages } = useDict()
     return (
         <div className={styles.sider}>
             <Avatar size={150} src={avatar} className={styles.avatar} alt="Аватарка" />
+
             <Title level={5} className={styles.infoSectionTitle}>{words.personalData}</Title>
+
             <InfoLine icon={icons.name} title={words.name}>
                 {personal.name}
             </InfoLine>
@@ -39,20 +35,24 @@ function AppSider() {
             <InfoLine icon={icons.place} title={words.place}>
                 {personal.place}
             </InfoLine>
-            <InfoLine icon={icons.address} title={words.adress}>
-                {personal.adress}
-            </InfoLine>
             <InfoLine icon={icons.telephone} title={words.telephone}>
-                {personal.telephone}
+                <a href={"tel:" + personal.telephone}>{personal.telephone}</a>
             </InfoLine>
             <InfoLine icon={icons.telegram} title={words.telegram}>
-                {personal.telegram}
+                <a href="https://t.me/lehaisanya" target="_blank" rel="noreferrer">{personal.telegram}</a>
             </InfoLine>
             <InfoLine icon={icons.email} title={words.email}>
-                {personal.email}
+                <a href={"mailto:" + personal.email}>{personal.email}</a>
             </InfoLine>
             
             <Title level={5} className={styles.infoSectionTitle}>{words.languages}</Title>
+
+            {languages.map((lang, i) => (<div key={i}>
+                <Row>
+                    <Col span={12}><Text strong>{lang.name}</Text>:</Col>
+                    <Col span={12}>{lang.level}</Col>
+                </Row>
+            </div>))}
         </div>
     )
 }

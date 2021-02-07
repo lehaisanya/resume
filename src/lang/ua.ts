@@ -23,14 +23,28 @@ const lang: Lang = {
         birthday: '4 Cічня 1999',
         place: 'Київська обл.',
         adress: 'смт. Глеваха, вул. Механізаторів, буд. 33',
-        telephone: '+3809675976212',
+        telephone: '+380675976212',
         telegram: '@lehaisanya',
         email: 'lehaisanya@gmail.com',
     },
+    languages: [
+        {
+            name: 'Українська',
+            level: 'Рідна'
+        },
+        {
+            name: 'Російська',
+            level: 'С1'
+        },
+        {
+            name: 'Англійська',
+            level: 'B1'
+        }
+    ],
     description: {
         title: 'React FrontEnd Developer',
         salary: 'Очікувана зарплата від 600$',
-        text: `Я добре вмію програмувати. Я розробляю вже протягом 6 років. Самостійно вивчав різні мови програмування, такі як Lua, Haskell, C++, Python. В данний момент зупинився на Javascript і Typescript. Особливості мов знаю досконально, оскільки колись писав свою надбудову з типізацією для Lua. Мені це просто подобається. Достатньо впевнено орієнтуюсь в ООП, REST API та інших архітектурних принципах. Шукаю місце, де буде цікаво і легко працювати, з можливістю покращення своїх навиків, у будь-яких напрямках. Здатний швидко вчитися і постійно займатися самоосвітою.`
+        text: `Я розробляю вже протягом 6 років. Самостійно вивчав різні мови програмування, такі як Lua, Haskell, C++, Python. В данний момент зупинився на Javascript і Typescript. Особливості мов знаю досконально, оскільки колись писав свою надбудову з типізацією для Lua. Мені це просто подобається. Достатньо впевнено орієнтуюсь в ООП, REST API та інших архітектурних принципах. Шукаю місце, де буде цікаво і легко працювати, з можливістю покращення своїх навиків, у будь-яких напрямках. Здатний швидко вчитися і постійно займатися самоосвітою.`
     },
     educations: [
         {
@@ -48,7 +62,7 @@ const lang: Lang = {
         {
             start: 'Вересень 2018',
             end: 'Зараз',
-            educ: 'Бакалавр - Інженерія програмного забезпечення (не закінчив)',
+            educ: 'Бакалавр - Інженерія програмного забезпечення',
             place: 'Державний Університет Телекомунікацій, Київ, Україна',
             extra: '5 курс (останній)'
         }
@@ -68,7 +82,7 @@ const lang: Lang = {
     skills: [
         {
             name: 'JavaScript (ES6)',
-            level: SkillLevel.Advanced
+            level: SkillLevel.Professional
         },
         {
             name: 'Node.js (Express)',
@@ -122,12 +136,14 @@ const lang: Lang = {
         {
             name: 'Resume',
             description: `Цей самий проект, для прикладу.`,
-            technologies: ['React', 'Typescript']
+            technologies: ['React', 'Typescript', 'Antd'],
+            link: 'https://github.com/lehaisanya/resume'
         },
         {
             name: 'Articles Here',
             description: `Онлайн редактор статтів. Тестовий проект для портфоліо. В ньому я демонструю свої знання технологій React/Redux. Повноцінний проект на MERN. В данний момент в процесі розробки.`,
-            technologies: ['React', 'Redux', 'MongoDB', 'Node.js', 'Typescript'],
+            technologies: ['React', 'Redux', 'MongoDB', 'Node.js', 'Typescript', 'Antd'],
+            link: 'https://github.com/lehaisanya/articles-here',
             inProgress: true
         }
     ]

@@ -1,21 +1,22 @@
 import React from 'react'
 import AppSection from 'components/AppSection'
 import SectionTitle from 'components/SectionTitle'
-import { ReadOutlined } from '@ant-design/icons'
-import { Card, Col, Row, Typography, Grid } from 'antd'
 import { useDict } from 'lang'
-
-const { Text } = Typography
+import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint'
+import Row from 'antd/lib/row'
+import Col from 'antd/lib/col'
+import Card from 'antd/lib/card'
+import Text from 'antd/lib/typography/Text'
 
 function ProjectsSection() {
     const { projects, words } = useDict()
-    const { sm } = Grid.useBreakpoint()
+    const { sm } = useBreakpoint()
     
     const size = sm ? 'default' : 'small'
 
     return (
         <AppSection>
-            <SectionTitle icon={<ReadOutlined />}>{words.projects}</SectionTitle>
+            <SectionTitle icon={<i className="fi fi-rr-physics" />}>{words.projects}</SectionTitle>
             
             <Row gutter={[5, 5]}>
                 {projects.map((project, i) => (<Col xs={24} sm={24} md={24} lg={12} key={i}>

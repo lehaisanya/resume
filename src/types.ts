@@ -26,6 +26,11 @@ export interface PersonalData {
     email: string
 }
 
+export interface LanguagesData {
+    name: string
+    level: string
+}
+
 export interface DescriptionData {
     title: string
     salary: string
@@ -71,6 +76,7 @@ export type LangType = 'ua' | 'ru' | 'en'
 export interface Lang {
     words: WordsData,
     personal: PersonalData
+    languages: LanguagesData[]
     description: DescriptionData
     educations: EducationData[]
     experience: ExperienceData[]

@@ -1,7 +1,6 @@
+import Space from 'antd/lib/space'
+import Title from 'antd/lib/typography/Title'
 import React, { FC, ReactNode } from 'react'
-import { Space, Typography } from 'antd'
-
-const { Title } = Typography
 
 interface SectionTitleProps {
     icon: ReactNode

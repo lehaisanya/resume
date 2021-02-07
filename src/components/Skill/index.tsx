@@ -1,9 +1,8 @@
 import React, { FC } from 'react'
-import { Progress, Typography } from 'antd'
-import { toDesk, toPercent } from 'utils'
+import { toPercent } from 'utils'
 import { SkillLevel } from 'types'
-
-const { Text } = Typography
+import Progress from 'antd/lib/progress'
+import Text from 'antd/lib/typography/Text'
 
 interface SkillProps {
     level: SkillLevel
@@ -12,10 +11,12 @@ interface SkillProps {
 
 const SkillComponent: FC<SkillProps> = ({ level, children }) => {
     return (
-        <div>
-            <div style={{ textAlign: 'center' }}><Text strong>{children}</Text> - {toDesk(level)}</div>
-            <Progress percent={toPercent(level)} showInfo={false} />
-        </div>
+        
+            <div style={{ textAlign: 'center' }}>
+                <div><Text strong>{children}</Text></div>
+                <Progress percent={toPercent(level)} showInfo={false} steps={5} trailColor="#f0f2f5" />
+            </div>
+        
     )
 }
 
