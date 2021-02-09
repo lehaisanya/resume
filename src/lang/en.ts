@@ -52,13 +52,13 @@ const lang: Lang = {
         {
             start: 'September 2014',
             end: 'May 2018',
-            educ: 'Junior Bachelor - Software Design',
+            educ: 'Junior Specialist - Software Design',
             place: 'College NAU, Vasilkov, Ukraine'
         },
         {
             start: 'September 2018',
             end: 'NOW',
-            educ: 'Bachelor - Software Engineering',
+            educ: 'Specialist - Software Engineering',
             place: 'State University of Telecommunications, Kyiv, Ukraine',
             extra: '5th year (last)'
         }
@@ -89,7 +89,7 @@ const lang: Lang = {
         },
         {
             name: 'Resume',
-            description: `The same project, for example.`,
+            description: `The same project. Fully adaptive. With the ability to change the language.`,
             technologies: ['React', 'Typescript', 'Antd'],
             link: 'https://github.com/lehaisanya/resume'
         },

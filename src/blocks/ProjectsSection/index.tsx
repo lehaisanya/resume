@@ -20,7 +20,13 @@ function ProjectsSection() {
             
             <Row gutter={[5, 5]}>
                 {projects.map((project, i) => (<Col xs={24} sm={24} md={24} lg={12} key={i}>
-                    <Card size={size} hoverable title={project.name} style={{ height: '100%' }} extra={project.link ? <a href={project.link}>{words.more}</a> : null}>
+                    <Card
+                        size={size}
+                        hoverable
+                        title={project.name}
+                        style={{ height: '100%' }}
+                        extra={project.link ? <a href={project.link} target="_blank" rel="noreferrer">{words.more}</a> : null}
+                    >
                         {project.description}
                         <div>
                             <Text strong>{words.uses}:</Text>
