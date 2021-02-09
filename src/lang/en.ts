@@ -39,7 +39,7 @@ const lang: Lang = {
     ],
     description: {
         title: 'React FrontEnd Developer',
-        salary: 'Expected salary from $600',
+        salary: 'Expected salary from $650',
         text: `I have been developing for 6 years. Independently studied various programming languages, such as Lua, Haskell, C++, Python. At the moment I settled on Javascript and Typescript. I know the peculiarities of languages thoroughly, because I once wrote my superstructure with typification for Lua. I just like it. I am quite confident in OOP, REST API and other architectural principles. I am looking for a place where it will be interesting and easy to work, with the opportunity to improve their skills in any direction. Able to learn quickly and constantly engage in self-education.`
     },
     educations: [
