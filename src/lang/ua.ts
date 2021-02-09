@@ -1,4 +1,4 @@
-import { Lang, SkillLevel } from 'types'
+import { Lang } from 'types'
 
 const lang: Lang = {
     words: {
@@ -21,11 +21,7 @@ const lang: Lang = {
     personal: {
         name: 'Олександр Соляр',
         birthday: '4 Cічня 1999',
-        place: 'Київська обл.',
-        adress: 'смт. Глеваха, вул. Механізаторів, буд. 33',
-        telephone: '+380675976212',
-        telegram: '@lehaisanya',
-        email: 'lehaisanya@gmail.com',
+        place: 'Київська обл.'
     },
     languages: [
         {
@@ -77,48 +73,6 @@ const lang: Lang = {
             title: 'Інтернет провайдер Crystall - Системний адміністратор',
             period: '2 роки',
             description: `Писав скрипти на Node.js для пришвидшення деяких робіт. Написав власний консольний клієнт для протоколу telnet, з підсвіткою синтаксису та іншими фічами. Також займався написанням шаблонів конфігурацій для пристроїв (свічів, олтів і тд.) на шаблонизаторі Pug. Після себе залишив базу готових шаблонів.`
-        }
-    ],
-    skills: [
-        {
-            name: 'JavaScript (ES6)',
-            level: SkillLevel.Professional
-        },
-        {
-            name: 'Node.js (Express)',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Lua',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Git',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'REST API',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'HTML/CSS',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'React',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Redux',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Typescript',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Webpack',
-            level: SkillLevel.Confident
         }
     ],
     projects: [

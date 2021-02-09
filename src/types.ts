@@ -20,10 +20,6 @@ export interface PersonalData {
     name: string
     birthday: string
     place: string
-    adress: string
-    telephone: string
-    telegram: string
-    email: string
 }
 
 export interface LanguagesData {
@@ -80,6 +76,5 @@ export interface Lang {
     description: DescriptionData
     educations: EducationData[]
     experience: ExperienceData[]
-    skills: SkillData[]
     projects: ProjectData[]
 }

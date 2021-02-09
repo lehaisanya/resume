@@ -8,12 +8,14 @@ import styles from './styles.module.css'
 import avatar from 'assets/avatar.png'
 import Title from 'antd/lib/typography/Title'
 import Text from 'antd/lib/typography/Text'
+import GithubOutlined from '@ant-design/icons/GithubOutlined'
 
 const icons = {
     name: <i className={"fi fi-rr-user " + styles.infoLineIcon} />,
     birthday: <i className={"fi fi-rr-calendar " + styles.infoLineIcon} />,
     place: <i className={"fi fi-rr-marker " + styles.infoLineIcon} />,
     telephone: <i className={"fi fi-rr-smartphone " + styles.infoLineIcon} />,
+    github: <GithubOutlined className={styles.infoLineIcon} />,
     telegram: <i className={"fi fi-rr-paper-plane " + styles.infoLineIcon} />,
     email: <i className={"fi fi-rr-envelope " + styles.infoLineIcon} />
 }
@@ -38,8 +40,11 @@ function AppSider() {
             <InfoLine icon={icons.telephone} title={words.telephone}>
                 <a href={"tel:" + personal.telephone}>{personal.telephone}</a>
             </InfoLine>
+            <InfoLine icon={icons.github} title="Github">
+                <a href={"https://github.com/" + personal.github} target="_blank" rel="noreferrer">{personal.github}</a>
+            </InfoLine>
             <InfoLine icon={icons.telegram} title={words.telegram}>
-                <a href="https://t.me/lehaisanya" target="_blank" rel="noreferrer">{personal.telegram}</a>
+                <a href={"https://t.me/" + personal.telegram} target="_blank" rel="noreferrer">{personal.telegram}</a>
             </InfoLine>
             <InfoLine icon={icons.email} title={words.email}>
                 <a href={"mailto:" + personal.email}>{personal.email}</a>

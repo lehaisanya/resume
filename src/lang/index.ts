@@ -1,9 +1,25 @@
 import React, { useContext } from 'react'
-import { LangType } from 'types'
+import { Lang, LangType } from 'types'
 
+import data from './data'
 import ua from './ua'
 import ru from './ru'
 import en from './en'
+
+const makeLang = (lang: Lang) => ({
+    ...lang,
+    skills: data.skills,
+    personal: {
+        ...lang.personal,
+        ...data.personal
+    }
+})
+
+const langs = {
+    ua: makeLang(ua),
+    ru: makeLang(ru),
+    en: makeLang(en)
+}
 
 interface LangContextProps {
     lang: LangType
@@ -17,12 +33,12 @@ export const LangContext = React.createContext<LangContextProps>({
 
 export const useDict = () => {
     const { lang } = useContext(LangContext)
-    
+
     switch (lang) {
-        case 'ua': return ua
-        case 'ru': return ru
-        case 'en': return en
-        default: return ua
+        case 'ua': return langs.ua
+        case 'ru': return langs.ru
+        case 'en': return langs.en
+        default: return langs.ua
     }
 }
 

@@ -1,4 +1,4 @@
-import { Lang, SkillLevel } from 'types'
+import { Lang } from 'types'
 
 const lang: Lang = {
     words: {
@@ -21,11 +21,7 @@ const lang: Lang = {
     personal: {
         name: 'Alexander Solyar',
         birthday: 'January 4, 1999',
-        place: 'Kyiv region',
-        adress: 'village Glevakha, street Mechanics, bldg. 33',
-        telephone: '+380675976212',
-        telegram: '@lehaisanya',
-        email: 'lehaisanya@gmail.com',
+        place: 'Kyiv region'
     },
     languages: [
         {
@@ -77,48 +73,6 @@ const lang: Lang = {
             title: 'Crystall ISP - System Administrator',
             period: '2 years',
             description: `Wrote scripts on Node.js to speed up some work. Wrote my own console client for the telnet protocol, with syntax highlighting and other features. He also wrote configuration templates for devices (switch, olts, etc.) on the Pug template engine. He left behind a database of ready-made templates.`
-        }
-    ],
-    skills: [
-        {
-            name: 'JavaScript (ES6)',
-            level: SkillLevel.Professional
-        },
-        {
-            name: 'Node.js (Express)',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Lua',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Git',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'REST API',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'HTML/CSS',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'React',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Redux',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Typescript',
-            level: SkillLevel.Advanced
-        },
-        {
-            name: 'Webpack',
-            level: SkillLevel.Confident
         }
     ],
     projects: [
