@@ -17,6 +17,7 @@ export const SegmentedProgress: FC<SegmentedProgressProps> = ({
         <SimpleGrid columns={segments} gap="4px" height="10px" {...props}>
             {segmentsList.map((segment) => (
                 <Box
+                    key={segment}
                     backgroundColor={segment <= value ? 'blue.400' : 'gray.200'}
                 />
             ))}

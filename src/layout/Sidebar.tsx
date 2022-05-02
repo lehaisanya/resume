@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Avatar, Box, Heading, Link, SimpleGrid } from '@chakra-ui/react'
 import avatar from 'assets/avatar.jpg'
 import { InfoLine } from 'components/InfoLine'
@@ -70,11 +70,11 @@ export const Sidebar = () => {
             </Heading>
 
             <SimpleGrid columns={2} marginBottom="30px">
-                {languages.map((language) => (
-                    <>
+                {languages.map((language, i) => (
+                    <Fragment key={i}>
                         <Box>{language.name}:</Box>
                         <Box>{language.level}</Box>
-                    </>
+                    </Fragment>
                 ))}
             </SimpleGrid>
         </Box>

@@ -46,8 +46,8 @@ export const Content = () => {
                 {words.education}
             </TitleLine>
             <Timeline marginBottom="10px">
-                {educations.map((education) => (
-                    <TimelineItem>
+                {educations.map((education, i) => (
+                    <TimelineItem key={i}>
                         <Flex>
                             <Box flex="1" marginRight="10px" marginTop="5px">
                                 {education.start}
@@ -71,10 +71,10 @@ export const Content = () => {
             <Accordion
                 marginBottom="10px"
                 allowMultiple
-                defaultIndex={experience.map((exp, i) => i)}
+                defaultIndex={experience.map((_, i) => i)}
             >
-                {experience.map((exp) => (
-                    <AccordionItem>
+                {experience.map((exp, i) => (
+                    <AccordionItem key={i}>
                         <AccordionButton>
                             <Box flex="1" textAlign="left">
                                 {exp.title} - {exp.period}
@@ -95,8 +95,8 @@ export const Content = () => {
                 gap="20px"
                 marginBottom="10px"
             >
-                {skills.map((skill) => (
-                    <Skill skill={skill} />
+                {skills.map((skill, i) => (
+                    <Skill key={i} skill={skill} />
                 ))}
             </SimpleGrid>
 
@@ -104,8 +104,8 @@ export const Content = () => {
                 {words.projects}
             </TitleLine>
             <SimpleGrid columns={{ base: 1, lg: 2 }} gap="10px">
-                {projects.map((project) => (
-                    <ProjectCard project={project} />
+                {projects.map((project, i) => (
+                    <ProjectCard key={i} project={project} />
                 ))}
             </SimpleGrid>
         </Box>
