@@ -44,7 +44,7 @@ export interface DescriptionData {
 
 export interface EducationData {
     start: string
-    end: string
+    end?: string
     name: string
     place: string
     extra?: string

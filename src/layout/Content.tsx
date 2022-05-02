@@ -50,7 +50,8 @@ export const Content = () => {
                     <TimelineItem>
                         <Flex>
                             <Box flex="1" marginRight="10px" marginTop="5px">
-                                {education.start} - {education.end}
+                                {education.start}
+                                {education.end ? ' - ' + education.end : null}
                             </Box>
                             <Box flex="2">
                                 <Text>{education.name}</Text>

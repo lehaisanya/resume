@@ -1,6 +1,6 @@
 import React from 'react'
 import { Avatar, Box, Heading, Link, SimpleGrid } from '@chakra-ui/react'
-import avatar from 'assets/avatar.png'
+import avatar from 'assets/avatar.jpg'
 import { InfoLine } from 'components/InfoLine'
 import { UserIcon } from 'icons/User'
 import { useResumeData } from 'hooks/useResumeData'

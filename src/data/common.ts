@@ -9,11 +9,19 @@ export const commonPersonalData: CommonPersonalData = {
 
 export const skills: SkillData[] = [
     {
-        name: 'JavaScript (ES6)',
+        name: 'JavaScript (ES2020)',
         level: SkillLevel.Professional,
     },
     {
         name: 'Node.js (Express)',
+        level: SkillLevel.Professional,
+    },
+    {
+        name: 'Typescript',
+        level: SkillLevel.Professional,
+    },
+    {
+        name: 'Git',
         level: SkillLevel.Professional,
     },
     {
@@ -25,16 +33,8 @@ export const skills: SkillData[] = [
         level: SkillLevel.Advanced,
     },
     {
-        name: 'Typescript',
-        level: SkillLevel.Advanced,
-    },
-    {
-        name: 'Git',
-        level: SkillLevel.Advanced,
-    },
-    {
-        name: 'REST API',
-        level: SkillLevel.Advanced,
+        name: 'MobX',
+        level: SkillLevel.Professional,
     },
     {
         name: 'HTML5/CSS3',
@@ -51,6 +51,14 @@ export const skills: SkillData[] = [
     {
         name: 'Webpack',
         level: SkillLevel.Confident,
+    },
+    {
+        name: 'REST API',
+        level: SkillLevel.Advanced,
+    },
+    {
+        name: 'SOLID',
+        level: SkillLevel.Advanced,
     },
     {
         name: 'Lua',

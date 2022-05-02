@@ -39,8 +39,8 @@ export const en: ChangedResumeData = {
     ],
     description: {
         title: 'React FrontEnd Developer',
-        salary: 'Expected salary from $650',
-        text: `I have been developing for 6 years. Independently studied various programming languages, such as Lua, Haskell, C++, Python. At the moment I settled on Javascript and Typescript. I know the peculiarities of languages thoroughly, because I once wrote my superstructure with typification for Lua. I just like it. I am quite confident in OOP, REST API and other architectural principles. I am looking for a place where it will be interesting and easy to work, with the opportunity to improve their skills in any direction. Able to learn quickly and constantly engage in self-education.`,
+        salary: 'Expected salary from $1000',
+        text: `I have been developing for 8 years. Independently studied various programming languages, such as Lua, Haskell, C++, Python. At the moment I settled on Javascript and Typescript. I know the peculiarities of languages thoroughly, because I once wrote my superstructure with typification for Lua. I just like it. I am quite confident in OOP, REST API, SOLID and other architectural principles, as well as patterns. I am looking for a place where it will be interesting and easy to work, with the opportunity to improve their skills in any direction. Able to learn quickly and constantly engage in self-education.`,
     },
     educations: [
         {
@@ -57,10 +57,9 @@ export const en: ChangedResumeData = {
         },
         {
             start: 'September 2018',
-            end: 'NOW',
             name: 'Specialist - Software Engineering',
             place: 'State University of Telecommunications, Kyiv, Ukraine',
-            extra: '5th year (last)',
+            extra: '5th year (not finished)',
         },
     ],
     experience: [
@@ -73,6 +72,11 @@ export const en: ChangedResumeData = {
             title: 'Crystall ISP - System Administrator',
             period: '2 years',
             description: `Wrote scripts on Node.js to speed up some work. Wrote my own console client for the telnet protocol, with syntax highlighting and other features. He also wrote configuration templates for devices (switch, olts, etc.) on the Pug template engine. He left behind a database of ready-made templates.`,
+        },
+        {
+            title: 'AzSoft - Frontend Developer (React)',
+            period: '1 year',
+            description: `During his work he managed to visit several projects. Initially, worked on a charting project with the mxGraph library on Angular, redesigned data structures, and fixed bugs. After that worked only with React. I visited a project where I had to create user interfaces, animate game panels and so on. The last project was set up by myself, it also had to build sequence diagrams, and I chose the more modern React Flow library. Developed architecture and subsequently conducted dialogues to improve architecture, planned refactoring and actively raised issues of project improvement. During work improved development skills with React and Typescript, got acquainted with new libraries, such as: Chakra UI, MobX, React Flow, React Hook Form.`,
         },
     ],
     projects: [
@@ -90,7 +94,7 @@ export const en: ChangedResumeData = {
         {
             name: 'Resume',
             description: `The same project. Fully adaptive. With the ability to change the language.`,
-            technologies: ['React', 'Typescript', 'Antd'],
+            technologies: ['React', 'Typescript', 'Chakra UI'],
             link: 'https://github.com/lehaisanya/resume',
         },
         {
@@ -106,6 +110,12 @@ export const en: ChangedResumeData = {
             ],
             link: 'https://github.com/lehaisanya/articles-here',
             inProgress: true,
+        },
+        {
+            name: 'RxJS Timer',
+            description: 'Test task. Timer using RxJS technology',
+            technologies: ['React', 'Typescript', 'RxJS'],
+            link: 'https://github.com/lehaisanya/test-timer-rxjs',
         },
     ],
 }
