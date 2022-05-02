@@ -29,14 +29,14 @@ export const Content = () => {
 
     return (
         <Box padding="15px">
-            <Flex marginBottom="15px">
+            <Flex marginBottom="10px">
                 <Center marginRight="10px">
                     <IdBadgeIcon boxSize="30px" />
                 </Center>
                 <Heading as="h1">{description.title}</Heading>
             </Flex>
 
-            <Text fontSize="20px" fontWeight="semibold">
+            <Text marginBottom="5px" fontSize="20px" fontWeight="semibold">
                 {description.salary}
             </Text>
 
@@ -65,7 +65,7 @@ export const Content = () => {
                 ))}
             </Timeline>
 
-            <TitleLine marginBottom="5px" icon={BriefcaseIcon}>
+            <TitleLine marginBottom="10px" icon={BriefcaseIcon}>
                 {words.experience}
             </TitleLine>
             <Accordion
@@ -91,7 +91,7 @@ export const Content = () => {
                 {words.skills}
             </TitleLine>
             <SimpleGrid
-                columns={{ base: 2, sm: 3, md: 4, lg: 6 }}
+                columns={{ base: 2, sm: 3, lg: 4 }}
                 gap="20px"
                 marginBottom="10px"
             >
@@ -100,7 +100,7 @@ export const Content = () => {
                 ))}
             </SimpleGrid>
 
-            <TitleLine marginBottom="5px" icon={PhysicsIcon}>
+            <TitleLine marginBottom="10px" icon={PhysicsIcon}>
                 {words.projects}
             </TitleLine>
             <SimpleGrid columns={{ base: 1, lg: 2 }} gap="10px">

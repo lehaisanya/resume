@@ -1,14 +1,5 @@
 import React, { FC } from 'react'
-import {
-    Box,
-    Center,
-    Flex,
-    Link,
-    ListItem,
-    Spacer,
-    Text,
-    UnorderedList,
-} from '@chakra-ui/react'
+import { Box, Center, Flex, Link, Spacer, Text } from '@chakra-ui/react'
 import { ProjectData } from 'types/core'
 import { useResumeData } from 'hooks/useResumeData'
 
@@ -45,12 +36,11 @@ export const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             </Flex>
             <Box padding="10px">
                 <Text>{project.description}</Text>
+                {project.inProgress ? (
+                    <Text color="green.400">{words.inProgress}</Text>
+                ) : null}
                 <Text fontWeight="semibold">{words.uses}:</Text>
-                <UnorderedList>
-                    {project.technologies.map((technology) => (
-                        <ListItem>{technology}</ListItem>
-                    ))}
-                </UnorderedList>
+                <Text>{project.technologies.join(', ')}</Text>
             </Box>
         </Box>
     )

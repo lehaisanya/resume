@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import { Box, Progress, Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
+import { SegmentedProgress } from './SegmentedProgress'
 import { SkillData } from 'types/core'
 
 interface SkillProps {
@@ -9,10 +10,15 @@ interface SkillProps {
 export const Skill: FC<SkillProps> = ({ skill }) => {
     return (
         <Box>
-            <Text fontWeight="semibold" textAlign="center">
+            <Text
+                fontWeight="semibold"
+                textAlign="center"
+                whiteSpace="nowrap"
+                marginBottom="5px"
+            >
                 {skill.name}
             </Text>
-            <Progress value={skill.level} max={4} />
+            <SegmentedProgress segments={5} value={skill.level + 1} />
         </Box>
     )
 }

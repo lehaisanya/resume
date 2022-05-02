@@ -14,6 +14,7 @@ export interface WordsData {
     uses: string
     languages: string
     more: string
+    inProgress: string
 }
 
 export interface CommonPersonalData {

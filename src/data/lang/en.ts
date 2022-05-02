@@ -17,6 +17,7 @@ export const en: ChangedResumeData = {
         uses: 'Uses technologies',
         languages: 'Languages',
         more: 'More',
+        inProgress: 'Under development',
     },
     personal: {
         name: 'Alexander Solyar',
@@ -99,7 +100,7 @@ export const en: ChangedResumeData = {
         },
         {
             name: 'Articles Here',
-            description: `Online article editor. Test project for portfolio. In it I demonstrate my knowledge of React/Redux technologies. A full-fledged project at MERN. Currently under development.`,
+            description: `Online article editor. Test project for portfolio. In it I demonstrate my knowledge of React/Redux technologies. A full-fledged project at MERN.`,
             technologies: [
                 'React',
                 'Redux',

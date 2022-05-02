@@ -17,6 +17,7 @@ export const ua: ChangedResumeData = {
         uses: 'Використанні технології',
         languages: 'Мови',
         more: 'Більше',
+        inProgress: 'В розробці',
     },
     personal: {
         name: 'Олександр Соляр',
@@ -99,7 +100,7 @@ export const ua: ChangedResumeData = {
         },
         {
             name: 'Articles Here',
-            description: `Онлайн редактор статтів. Тестовий проект для портфоліо. В ньому я демонструю свої знання технологій React/Redux. Повноцінний проект на MERN. В данний момент в процесі розробки.`,
+            description: `Онлайн редактор статтів. Тестовий проект для портфоліо. В ньому я демонструю свої знання технологій React/Redux. Повноцінний проект на MERN.`,
             technologies: [
                 'React',
                 'Redux',
