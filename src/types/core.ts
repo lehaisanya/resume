@@ -57,8 +57,8 @@ export interface ExperienceData {
 }
 
 export enum SkillLevel {
-    Basic,
-    Confident,
+    Basic = 1,
+    Confident = 2,
     Advanced,
     Professional,
 }

@@ -26,6 +26,7 @@ export const Layout = () => {
         <Box>
             <Flex
                 position="fixed"
+                zIndex="100"
                 width="100%"
                 height="50px"
                 bgColor="blue.800"
@@ -47,7 +48,7 @@ export const Layout = () => {
             <Box width="100%" height="50px" />
             <Flex bgColor="gray.300" direction="row">
                 {isDesctop ? (
-                    <Box maxWidth="300px" bgColor="white">
+                    <Box maxWidth="250px" bgColor="white">
                         <Sidebar />
                     </Box>
                 ) : (

@@ -1,52 +1,82 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
-
-const LoremSmall = () => {
-    return (
-        <Box>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            similique doloribus officiis possimus ratione fugiat quaerat facere
-            voluptate provident explicabo pariatur nisi asperiores, ipsum
-            praesentium nobis ad, aliquam voluptas quis. Distinctio quas hic
-            totam illo veniam at aut repudiandae quisquam enim sint nobis qui ad
-            esse voluptate neque deleniti sit corrupti temporibus officia,
-            mollitia eaque sed voluptatum? Reiciendis, iste explicabo. Sapiente
-            excepturi ut nesciunt veniam asperiores molestias ullam corporis
-            dolore inventore. Natus officiis nemo provident ipsum, sed,
-            molestiae autem ad quia fuga expedita fugiat voluptatem reiciendis
-            pariatur totam delectus architecto! Ex accusantium nam, eligendi
-            nisi vitae assumenda natus rem animi praesentium laborum blanditiis
-            reiciendis repudiandae. Cupiditate aperiam aliquid ab, culpa non
-            inventore et? Doloribus perferendis nemo porro vel consequatur eius!
-            Amet aliquid distinctio rerum delectus! Ipsa cum, earum suscipit
-            iste cumque fuga laudantium non temporibus. Natus modi repudiandae,
-            impedit est ab eligendi rerum harum rem ipsam corrupti sequi culpa
-            reprehenderit. At, rerum magnam ullam voluptatibus molestiae dicta,
-            officiis obcaecati repellat hic doloribus maxime ut consequuntur
-            nihil ab incidunt, dolore deleniti atque et laborum? Rerum,
-            dignissimos quas. Unde ut aspernatur iusto. Mollitia illo quidem
-            dignissimos eligendi ducimus vero ipsam voluptate laudantium earum
-            accusantium hic, quas temporibus consectetur aspernatur quam sunt
-            consequuntur tempore maiores? Mollitia nulla id, consectetur
-            eligendi placeat dolores iste? Quos odio repellat sed id? Doloremque
-            odit ad vel ullam! Sapiente ut reprehenderit laboriosam ea, mollitia
-            blanditiis nostrum repellat nesciunt quasi soluta ducimus corrupti
-            architecto beatae, corporis quae. Eius, quasi. Rem sit excepturi
-            provident debitis, tempora natus ab impedit laborum, magnam soluta,
-            culpa facere in quibusdam deleniti? Eligendi quae nesciunt
-            doloremque nulla ullam quod, repellat fuga quam rerum explicabo et.
-            Placeat at minima dolore impedit voluptate vitae dolorum quas
-            voluptatibus iusto! Provident ipsam tempore dignissimos qui
-            officiis, non pariatur illum consequuntur ut dicta a molestias, iure
-            iusto sapiente maiores consequatur.
-        </Box>
-    )
-}
+import { Avatar, Box, Heading, Link, SimpleGrid } from '@chakra-ui/react'
+import avatar from 'assets/avatar.png'
+import { InfoLine } from 'components/InfoLine'
+import { UserIcon } from 'icons/User'
+import { useResumeData } from 'hooks/useResumeData'
+import { CalendarIcon } from 'icons/Calendar'
+import { MarkerIcon } from 'icons/Marker'
+import { SmartphoneIcon } from 'icons/Smartphone'
+import { GithubIcon } from 'icons/Github'
+import { PaperPlaneIcon } from 'icons/PaperPlane'
+import { EnvelopIcon } from 'icons/Envelop'
 
 export const Sidebar = () => {
+    const { words, personal, languages } = useResumeData()
     return (
         <Box padding={{ base: '0px', md: '10px' }}>
-            <LoremSmall />
+            <Box margin="10px">
+                <Avatar size="full" src={avatar} />
+            </Box>
+
+            <Heading as="h3" size="sm" textAlign="center" marginBottom="5px">
+                {words.personalData}
+            </Heading>
+
+            <InfoLine title={words.name} icon={UserIcon}>
+                {personal.name}
+            </InfoLine>
+
+            <InfoLine title={words.birthday} icon={CalendarIcon}>
+                {personal.birthday}
+            </InfoLine>
+
+            <InfoLine title={words.place} icon={MarkerIcon}>
+                {personal.place}
+            </InfoLine>
+
+            <InfoLine title={words.telephone} icon={SmartphoneIcon}>
+                <Link color="teal.600" href={'tel:' + personal.telephone}>
+                    {personal.telephone}
+                </Link>
+            </InfoLine>
+
+            <InfoLine title="Github" icon={GithubIcon}>
+                <Link
+                    color="teal.600"
+                    href={'https://github.com/' + personal.github}
+                >
+                    @{personal.github}
+                </Link>
+            </InfoLine>
+
+            <InfoLine title={words.telegram} icon={PaperPlaneIcon}>
+                <Link
+                    color="teal.600"
+                    href={'https://t.me/' + personal.telegram}
+                >
+                    @{personal.telegram}
+                </Link>
+            </InfoLine>
+
+            <InfoLine title={words.email} icon={EnvelopIcon} marginBottom="5px">
+                <Link color="teal.600" href={'mailto:' + personal.email}>
+                    {personal.email}
+                </Link>
+            </InfoLine>
+
+            <Heading as="h3" size="sm" textAlign="center" marginBottom="5px">
+                {words.languages}
+            </Heading>
+
+            <SimpleGrid columns={2} marginBottom="30px">
+                {languages.map((language) => (
+                    <>
+                        <Box>{language.name}:</Box>
+                        <Box>{language.level}</Box>
+                    </>
+                ))}
+            </SimpleGrid>
         </Box>
     )
 }
