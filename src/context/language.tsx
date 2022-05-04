@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useContext, useState } from 'react'
 import { LangType } from 'types'
 
 interface LanguageContextProps {
@@ -25,4 +25,8 @@ export const LanguageProvider: FC = ({ children }) => {
             {children}
         </LanguageContext.Provider>
     )
+}
+
+export function useLanguage() {
+    return useContext(LanguageContext)
 }

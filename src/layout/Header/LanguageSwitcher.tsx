@@ -1,33 +1,25 @@
-import React, { useContext } from 'react'
-import { Stack, Button } from '@chakra-ui/react'
-import { LanguageContext } from 'context/language'
+import React from 'react'
+import { RadioButton, RadioButtons } from 'components/RadioButtons'
+import { useLanguage } from 'context/language'
+import { LangType } from 'types'
+
+const languages = ['ua', 'ru', 'en']
 
 export const LanguageSwitcher = () => {
-    const { changeLanguage } = useContext(LanguageContext)
+    const { language, changeLanguage } = useLanguage()
 
     return (
-        <Stack direction="row">
-            <Button
-                colorScheme="blue"
-                size="sm"
-                onClick={() => changeLanguage('en')}
-            >
-                en
-            </Button>
-            <Button
-                colorScheme="blue"
-                size="sm"
-                onClick={() => changeLanguage('ru')}
-            >
-                ru
-            </Button>
-            <Button
-                colorScheme="blue"
-                size="sm"
-                onClick={() => changeLanguage('ua')}
-            >
-                ua
-            </Button>
-        </Stack>
+        <RadioButtons
+            colorScheme="blue"
+            size="sm"
+            value={language}
+            onChange={(newLanguage) => changeLanguage(newLanguage as LangType)}
+        >
+            {languages.map((option) => (
+                <RadioButton key={option} value={option}>
+                    {option.toUpperCase()}
+                </RadioButton>
+            ))}
+        </RadioButtons>
     )
 }
