@@ -22,12 +22,12 @@ export const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             <Flex height="40px" borderBottom="1px solid" borderColor="gray.200">
                 <Center paddingX="10px">{project.name}</Center>
                 <Spacer />
-                {project.link ? (
+                {project.repository ? (
                     <Center paddingRight="10px">
                         <Link
                             color="blue.400"
                             target="_blank"
-                            href={project.link}
+                            href={project.repository}
                         >
                             {words.more}
                         </Link>

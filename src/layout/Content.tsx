@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     Accordion,
     AccordionButton,
@@ -19,13 +19,27 @@ import { BriefcaseIcon } from 'icons/Briefcase'
 import { TitleLine } from 'components/TitleLine'
 import { DiplomaIcon } from 'icons/Diploma'
 import { PhysicsIcon } from 'icons/Physics'
+import { DollarIcon } from 'icons/Dollar'
+import { FileCheckIcon } from 'icons/FileCheck'
 import { ProjectCard } from 'components/ProjectCard'
 import { Skill } from 'components/Skill'
 import { Timeline, TimelineItem } from 'components/Timeline'
 
 export const Content = () => {
-    const { description, words, experience, projects, skills, educations } =
-        useResumeData()
+    const {
+        description,
+        words,
+        experience,
+        projects,
+        testTasks,
+        skills,
+        educations,
+        personal,
+    } = useResumeData()
+
+    useEffect(() => {
+        document.title = `[${words.resume}] ${personal.name}`
+    }, [words.resume, personal.name])
 
     return (
         <Box padding="15px">
@@ -36,9 +50,14 @@ export const Content = () => {
                 <Heading as="h1">{description.title}</Heading>
             </Flex>
 
-            <Text marginBottom="5px" fontSize="20px" fontWeight="semibold">
-                {description.salary}
-            </Text>
+            <Flex marginBottom="5px">
+                <Center marginRight="5px">
+                    <DollarIcon boxSize="25px" />
+                </Center>
+                <Text fontSize="20px" fontWeight="semibold">
+                    {description.salary}
+                </Text>
+            </Flex>
 
             <Text marginBottom="10px">{description.text}</Text>
 
@@ -103,9 +122,22 @@ export const Content = () => {
             <TitleLine marginBottom="10px" icon={PhysicsIcon}>
                 {words.projects}
             </TitleLine>
-            <SimpleGrid columns={{ base: 1, lg: 2 }} gap="10px">
+            <SimpleGrid
+                columns={{ base: 1, lg: 2 }}
+                gap="10px"
+                marginBottom="10px"
+            >
                 {projects.map((project, i) => (
                     <ProjectCard key={i} project={project} />
+                ))}
+            </SimpleGrid>
+
+            <TitleLine marginBottom="10px" icon={FileCheckIcon}>
+                {words.testTask}
+            </TitleLine>
+            <SimpleGrid columns={{ base: 1, lg: 2 }} gap="10px">
+                {testTasks.map((task, i) => (
+                    <ProjectCard key={i} project={task} />
                 ))}
             </SimpleGrid>
         </Box>
