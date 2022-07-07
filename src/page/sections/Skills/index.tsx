@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, SimpleGrid } from '@chakra-ui/react'
-import { Skill } from 'components/Skill'
 import { TitleLine } from 'components/TitleLine'
+import { Skill } from './Skill'
 import { useResumeData } from 'hooks/useResumeData'
 import { DiplomaIcon } from 'icons/Diploma'
 

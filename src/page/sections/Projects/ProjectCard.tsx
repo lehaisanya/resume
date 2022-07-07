@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Box, Center, Flex, Link, Spacer, Text } from '@chakra-ui/react'
-import { ProjectData } from 'types/core'
 import { useResumeData } from 'hooks/useResumeData'
+import { ProjectData } from 'types/core'
 
 interface ProjectCardProps {
     project: ProjectData

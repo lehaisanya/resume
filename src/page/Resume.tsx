@@ -5,7 +5,7 @@ import { EducationSection } from './sections/Education'
 import { ExperienceSection } from './sections/Experience'
 import { SkillsSection } from './sections/Skills'
 import { ProjectsSection } from './sections/Projects'
-import { TestTaksSection } from './sections/TestTaks'
+import { TestTaksSection } from './sections/TestTasks'
 import { useResumeData } from 'hooks/useResumeData'
 import { usePageTitle } from 'hooks/usePageTitle'
 

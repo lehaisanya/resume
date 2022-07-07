@@ -1,9 +1,9 @@
+import React from 'react'
 import { Box, SimpleGrid } from '@chakra-ui/react'
-import { ProjectCard } from 'components/ProjectCard'
 import { TitleLine } from 'components/TitleLine'
+import { TestTaskCard } from './TestTaskCard'
 import { useResumeData } from 'hooks/useResumeData'
 import { FileCheckIcon } from 'icons/FileCheck'
-import React from 'react'
 
 export const TestTaksSection = () => {
     const { words, testTasks } = useResumeData()
@@ -15,7 +15,7 @@ export const TestTaksSection = () => {
             </TitleLine>
             <SimpleGrid columns={{ base: 1, lg: 2 }} gap="10px">
                 {testTasks.map((task, i) => (
-                    <ProjectCard key={i} project={task} />
+                    <TestTaskCard key={i} task={task} />
                 ))}
             </SimpleGrid>
         </Box>

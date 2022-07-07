@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, SimpleGrid } from '@chakra-ui/react'
-import { ProjectCard } from 'components/ProjectCard'
+import { ProjectCard } from './ProjectCard'
 import { TitleLine } from 'components/TitleLine'
 import { useResumeData } from 'hooks/useResumeData'
 import { PhysicsIcon } from 'icons/Physics'
