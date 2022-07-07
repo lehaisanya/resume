@@ -14,8 +14,8 @@ import {
     useDisclosure,
 } from '@chakra-ui/react'
 import { Sidebar } from './Sidebar'
-import { Content } from './Content'
 import { Header } from './Header'
+import { ResumePage } from 'page/Resume'
 import { ListIcon } from 'icons/List'
 
 export const Layout = () => {
@@ -69,7 +69,7 @@ export const Layout = () => {
                         borderRadius={{ base: '0px', md: '20px' }}
                         bgColor="white"
                     >
-                        <Content />
+                        <ResumePage />
                     </Box>
                 </Container>
             </Flex>
