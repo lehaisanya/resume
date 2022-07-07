@@ -45,6 +45,7 @@ export const Sidebar = () => {
                 <Link
                     color="teal.600"
                     href={'https://github.com/' + personal.github}
+                    target="_blank"
                 >
                     @{personal.github}
                 </Link>
@@ -54,13 +55,18 @@ export const Sidebar = () => {
                 <Link
                     color="teal.600"
                     href={'https://t.me/' + personal.telegram}
+                    target="_blank"
                 >
                     @{personal.telegram}
                 </Link>
             </InfoLine>
 
             <InfoLine title={words.email} icon={EnvelopIcon} marginBottom="5px">
-                <Link color="teal.600" href={'mailto:' + personal.email}>
+                <Link
+                    color="teal.600"
+                    href={'mailto:' + personal.email}
+                    target="_blank"
+                >
                     {personal.email}
                 </Link>
             </InfoLine>
