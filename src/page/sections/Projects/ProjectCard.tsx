@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
-import { Box, Center, Flex, Link, Spacer, Text } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
+import { Card } from 'components/Card'
 import { useResumeData } from 'hooks/useResumeData'
+import { createLinks } from 'components/Card/utils'
 import { ProjectData } from 'types/core'
 
 interface ProjectCardProps {
@@ -10,38 +12,29 @@ interface ProjectCardProps {
 export const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
     const { words } = useResumeData()
 
+    const links = createLinks([
+        project.viewLink
+            ? {
+                  text: words.view,
+                  href: project.viewLink,
+              }
+            : null,
+        project.repository
+            ? {
+                  text: words.more,
+                  href: project.repository,
+              }
+            : null,
+    ])
+
     return (
-        <Box
-            border="1px solid"
-            borderColor="gray.200"
-            transitionDuration="0.5s"
-            _hover={{
-                boxShadow: '0px 0px 8px -3px #000000',
-            }}
-        >
-            <Flex height="40px" borderBottom="1px solid" borderColor="gray.200">
-                <Center paddingX="10px">{project.name}</Center>
-                <Spacer />
-                {project.repository ? (
-                    <Center paddingRight="10px">
-                        <Link
-                            color="blue.400"
-                            target="_blank"
-                            href={project.repository}
-                        >
-                            {words.more}
-                        </Link>
-                    </Center>
-                ) : null}
-            </Flex>
-            <Box padding="10px">
-                <Text>{project.description}</Text>
-                {project.inProgress ? (
-                    <Text color="green.400">{words.inProgress}</Text>
-                ) : null}
-                <Text fontWeight="semibold">{words.uses}:</Text>
-                <Text>{project.technologies.join(', ')}</Text>
-            </Box>
-        </Box>
+        <Card title={project.name} links={links}>
+            <Text>{project.description}</Text>
+            {project.inProgress ? (
+                <Text color="green.400">{words.inProgress}</Text>
+            ) : null}
+            <Text fontWeight="semibold">{words.uses}:</Text>
+            <Text>{project.technologies.join(', ')}</Text>
+        </Card>
     )
 }

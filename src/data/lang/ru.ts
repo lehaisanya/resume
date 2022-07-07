@@ -140,7 +140,7 @@ export const ru: ChangedResumeData = {
                 'React Router Dom',
             ],
             repository: 'https://github.com/lehaisanya/test-phonebook',
-            viewLink: 'lehaisanya.github.io/test-phonebook/',
+            viewLink: 'https://lehaisanya.github.io/test-phonebook/',
         },
         {
             name: 'Таблица и Модальное окно',
