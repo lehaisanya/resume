@@ -30,7 +30,7 @@ export const Card: FC<CardProps> = ({ title, links, children }) => {
                 <Spacer />
                 <Stack direction="row" spacing="10px">
                     {links.map((link, i) => (
-                        <Center>
+                        <Center key={i}>
                             <Link
                                 color="blue.400"
                                 target="_blank"
