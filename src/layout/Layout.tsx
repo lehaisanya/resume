@@ -10,17 +10,17 @@ import {
     DrawerOverlay,
     Flex,
     IconButton,
-    useBreakpointValue,
     useDisclosure,
 } from '@chakra-ui/react'
 import { Sidebar } from './Sidebar'
 import { Header } from './Header'
 import { ResumePage } from 'page/Resume'
 import { ListIcon } from 'icons/List'
+import { useDevice } from 'hooks/useDevice'
 
 export const Layout = () => {
-    const isDesctop = useBreakpointValue({ base: false, md: true })
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isDesctop } = useDevice()
 
     return (
         <Box>
@@ -28,11 +28,10 @@ export const Layout = () => {
                 position="fixed"
                 zIndex="100"
                 width="100%"
-                height="50px"
                 bgColor="blue.800"
                 color="white"
             >
-                {isDesctop ? null : (
+                {!isDesctop ? (
                     <Center marginX="10px">
                         <IconButton
                             aria-label="Open Sidebar"
@@ -42,7 +41,7 @@ export const Layout = () => {
                             onClick={onOpen}
                         />
                     </Center>
-                )}
+                ) : null}
                 <Header />
             </Flex>
             <Box width="100%" height="50px" />

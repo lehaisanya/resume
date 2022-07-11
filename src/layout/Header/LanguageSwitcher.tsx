@@ -1,9 +1,8 @@
 import React from 'react'
 import { RadioButton, RadioButtons } from 'components/RadioButtons'
 import { useLanguage } from 'context/language'
+import { languages } from 'data'
 import { LangType } from 'types'
-
-const languages = ['ua', 'ru', 'en']
 
 export const LanguageSwitcher = () => {
     const { language, changeLanguage } = useLanguage()
