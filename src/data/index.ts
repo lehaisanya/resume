@@ -16,6 +16,8 @@ const data: ResumeData[] = rawLangs.map(({ personal, ...changedData }) => ({
     skills,
 }))
 
+export const languages = ['ua', 'ru', 'en']
+
 export const langs: Record<LangType, ResumeData> = {
     en: data[0],
     ru: data[1],

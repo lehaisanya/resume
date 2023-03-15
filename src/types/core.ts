@@ -1,4 +1,5 @@
 export interface WordsData {
+    resume: string
     name: string
     birthday: string
     place: string
@@ -11,9 +12,11 @@ export interface WordsData {
     experience: string
     skills: string
     projects: string
+    testTask: string
     uses: string
     languages: string
     more: string
+    view: string
     inProgress: string
 }
 
@@ -73,8 +76,17 @@ export interface ProjectData {
     name: string
     description: string
     technologies: string[]
-    link?: string
+    repository?: string
+    viewLink?: string
     inProgress?: boolean
+}
+
+export interface TestTaskData {
+    name: string
+    description: string
+    technologies: string[]
+    repository: string
+    viewLink?: string
 }
 
 export interface ChangedResumeData {
@@ -85,6 +97,7 @@ export interface ChangedResumeData {
     educations: EducationData[]
     experience: ExperienceData[]
     projects: ProjectData[]
+    testTasks: TestTaskData[]
 }
 
 export interface ResumeData {
@@ -96,4 +109,5 @@ export interface ResumeData {
     skills: SkillData[]
     experience: ExperienceData[]
     projects: ProjectData[]
+    testTasks: TestTaskData[]
 }

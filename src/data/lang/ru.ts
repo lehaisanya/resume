@@ -2,6 +2,7 @@ import { ChangedResumeData } from 'types/core'
 
 export const ru: ChangedResumeData = {
     words: {
+        resume: 'Резюме',
         name: 'Имя',
         birthday: 'День рождения',
         place: 'Место нахождения',
@@ -14,9 +15,11 @@ export const ru: ChangedResumeData = {
         experience: 'Опыт работы',
         skills: 'Навыки',
         projects: 'Проекты',
+        testTask: 'Тестовые задания',
         uses: 'Использованые технологии',
         languages: 'Языки',
         more: 'Больше',
+        view: 'Посмотреть',
         inProgress: 'В разработке',
     },
     personal: {
@@ -82,6 +85,24 @@ export const ru: ChangedResumeData = {
     ],
     projects: [
         {
+            name: 'Resume',
+            description: `Этот же проект. Полностью адаптивный. С возможностью менять язык.`,
+            technologies: ['React', 'Typescript', 'Chakra UI'],
+            repository: 'https://github.com/lehaisanya/resume',
+        },
+        {
+            name: 'Music metadata',
+            description: '',
+            technologies: [
+                'React',
+                'Typescript',
+                'MobX',
+                'Chakra UI',
+                'Express',
+            ],
+            repository: 'https://github.com/lehaisanya/music-metadata',
+        },
+        {
             name: 'Tua',
             description: `Надстройка для Lua с типизацией, такая как Typescript (собственно Typescript я и вдохновлялся и черпал из него идеи). Была темой дипломной работы. Писался в целях саморазвития. Я досконально изучал компиляторы и различные системы типизации, механизмы взаимодействия в языках программирования. Прочитал много книг по теме. Первый проект в котором я учился рефакторинга и оптимизации. На данный момент проект заброшен. Возможно вернусь к нему позже.`,
             technologies: ['Node.js'],
@@ -90,14 +111,9 @@ export const ru: ChangedResumeData = {
             name: 'TelnetMy',
             description: `Консольный клиент для протокола telnet. Работа системного администратора требует много рутинных действий. Поэтому я решил автоматизировать частое действие: авторизация на устройстве. По возможности старался наполнять проект новыми фичам. Так в нем появилась подсветка текста: различных чисел, дат, серийных номеров и др. Также появился список с устройствами, где можно сразу выбрать нужный, не вводя его IP. А также появился список пользователей, где можно было выбрать пользователя от которого мы хотим авторизоваться на устройстве.`,
             technologies: ['Node.js'],
-            link: 'https://github.com/lehaisanya/telnet-my',
+            repository: 'https://github.com/lehaisanya/telnet-my',
         },
-        {
-            name: 'Resume',
-            description: `Этот же проект. Полностью адаптивный. С возможностью менять язык.`,
-            technologies: ['React', 'Typescript', 'Chakra UI'],
-            link: 'https://github.com/lehaisanya/resume',
-        },
+
         {
             name: 'Articles Here',
             description: `Онлайн редактор статей. Тестовый проект для портфолио. В нем я демонстрирую свои знания технологий React/Redux. Полноценный проект на MERN.`,
@@ -109,14 +125,41 @@ export const ru: ChangedResumeData = {
                 'Typescript',
                 'Antd',
             ],
-            link: 'https://github.com/lehaisanya/articles-here',
             inProgress: true,
         },
+    ],
+    testTasks: [
         {
-            name: 'RxJS Timer',
-            description: `Тестовое задание. Таймер с использованием технологии RxJS`,
+            name: 'Телефонная книга',
+            description: '',
+            technologies: [
+                'React',
+                'Typescript',
+                'MobX',
+                'SASS',
+                'React Router Dom',
+            ],
+            repository: 'https://github.com/lehaisanya/test-phonebook',
+            viewLink: 'https://lehaisanya.github.io/test-phonebook/',
+        },
+        {
+            name: 'Таблица и Модальное окно',
+            description: '',
+            technologies: [
+                'React',
+                'Typescript',
+                'react-hook-form',
+                'Redux (toolkit)',
+            ],
+            repository: 'https://github.com/lehaisanya/test-table-and-modal',
+            viewLink: 'https://lehaisanya.github.io/test-table-and-modal/',
+        },
+        {
+            name: 'RxJS Таймер',
+            description: '',
             technologies: ['React', 'Typescript', 'RxJS'],
-            link: 'https://github.com/lehaisanya/test-timer-rxjs',
+            repository: 'https://github.com/lehaisanya/test-timer-rxjs',
+            viewLink: 'https://lehaisanya.github.io/test-timer-rxjs/',
         },
     ],
 }

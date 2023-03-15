@@ -2,6 +2,7 @@ import { ChangedResumeData } from 'types/core'
 
 export const en: ChangedResumeData = {
     words: {
+        resume: 'Resume',
         name: 'Name',
         birthday: 'Birthday',
         place: 'Location',
@@ -14,9 +15,11 @@ export const en: ChangedResumeData = {
         experience: 'Experience',
         skills: 'Skills',
         projects: 'Projects',
+        testTask: 'Test tasks',
         uses: 'Uses technologies',
         languages: 'Languages',
         more: 'More',
+        view: 'View',
         inProgress: 'Under development',
     },
     personal: {
@@ -82,6 +85,24 @@ export const en: ChangedResumeData = {
     ],
     projects: [
         {
+            name: 'Resume',
+            description: `The same project. Fully adaptive. With the ability to change the language.`,
+            technologies: ['React', 'Typescript', 'Chakra UI'],
+            repository: 'https://github.com/lehaisanya/resume',
+        },
+        {
+            name: 'Music metadata',
+            description: '',
+            technologies: [
+                'React',
+                'Typescript',
+                'MobX',
+                'Chakra UI',
+                'Express',
+            ],
+            repository: 'https://github.com/lehaisanya/music-metadata',
+        },
+        {
             name: 'Tua',
             description: `An superstructure for Lua with typification, such as Typescript (actually Typescript, I was inspired and drew ideas from it). It was the topic of the thesis. Written for self-development. I thoroughly studied compilers and various typing systems, mechanisms of interaction in programming languages. I read many books on the subject. The first project in which I studied refactoring and optimization. At the moment the project is abandoned. Maybe I'll come back to him later.`,
             technologies: ['Node.js'],
@@ -90,13 +111,7 @@ export const en: ChangedResumeData = {
             name: 'TelnetMy',
             description: `Console client for telnet protocol. The work of a system administrator requires a lot of routine actions. So I decided to automate the most common action: authorization on the device. Whenever possible I tried to fill the project with new features. So there was a backlight of the text: different numbers, dates, serial numbers, etc. There is also a list of devices where you can immediately select the desired one without entering its IP. And there was a list of users, where you could also select the user from whom we want to log in to the device.`,
             technologies: ['Node.js'],
-            link: 'https://github.com/lehaisanya/telnet-my',
-        },
-        {
-            name: 'Resume',
-            description: `The same project. Fully adaptive. With the ability to change the language.`,
-            technologies: ['React', 'Typescript', 'Chakra UI'],
-            link: 'https://github.com/lehaisanya/resume',
+            repository: 'https://github.com/lehaisanya/telnet-my',
         },
         {
             name: 'Articles Here',
@@ -109,14 +124,41 @@ export const en: ChangedResumeData = {
                 'Typescript',
                 'Antd',
             ],
-            link: 'https://github.com/lehaisanya/articles-here',
             inProgress: true,
+        },
+    ],
+    testTasks: [
+        {
+            name: 'Phonebook',
+            description: '',
+            technologies: [
+                'React',
+                'Typescript',
+                'MobX',
+                'SASS',
+                'React Router Dom',
+            ],
+            repository: 'https://github.com/lehaisanya/test-phonebook',
+            viewLink: 'https://lehaisanya.github.io/test-phonebook/',
+        },
+        {
+            name: 'Table and Modal',
+            description: '',
+            technologies: [
+                'React',
+                'Typescript',
+                'react-hook-form',
+                'Redux (toolkit)',
+            ],
+            repository: 'https://github.com/lehaisanya/test-table-and-modal',
+            viewLink: 'https://lehaisanya.github.io/test-table-and-modal/',
         },
         {
             name: 'RxJS Timer',
             description: 'Test task. Timer using RxJS technology',
             technologies: ['React', 'Typescript', 'RxJS'],
-            link: 'https://github.com/lehaisanya/test-timer-rxjs',
+            repository: 'https://github.com/lehaisanya/test-timer-rxjs',
+            viewLink: 'https://lehaisanya.github.io/test-timer-rxjs/',
         },
     ],
 }
