@@ -8,8 +8,8 @@ import {
     MenuOptionGroup,
 } from '@chakra-ui/react'
 import { useLanguage } from 'context/language'
-import { languages } from 'data'
-import { LangType } from 'types'
+import { languageNames } from 'lang'
+import { Locale } from 'types/locals'
 
 export const LanguageMenu = () => {
     const { language, changeLanguage } = useLanguage()
@@ -24,10 +24,10 @@ export const LanguageMenu = () => {
                     type="radio"
                     value={language}
                     onChange={(newLanguage) =>
-                        changeLanguage(newLanguage as LangType)
+                        changeLanguage(newLanguage as Locale)
                     }
                 >
-                    {languages.map((option) => (
+                    {languageNames.map((option) => (
                         <MenuItemOption
                             key={option}
                             value={option}

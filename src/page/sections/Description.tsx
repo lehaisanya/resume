@@ -5,7 +5,7 @@ import { DollarIcon } from 'icons/Dollar'
 import { IdBadgeIcon } from 'icons/IdBadge'
 
 export const DescriptionSection = () => {
-    const { description } = useResumeData()
+    const { summary } = useResumeData()
 
     return (
         <Box marginBottom="10px">
@@ -13,7 +13,7 @@ export const DescriptionSection = () => {
                 <Center marginRight="10px">
                     <IdBadgeIcon boxSize="30px" />
                 </Center>
-                <Heading as="h1">{description.title}</Heading>
+                <Heading as="h1">{summary.title}</Heading>
             </Flex>
 
             <Flex marginBottom="5px">
@@ -21,11 +21,11 @@ export const DescriptionSection = () => {
                     <DollarIcon boxSize="25px" />
                 </Center>
                 <Text fontSize="20px" fontWeight="semibold">
-                    {description.salary}
+                    {summary.salary}
                 </Text>
             </Flex>
 
-            <Text>{description.text}</Text>
+            <Text>{summary.text}</Text>
         </Box>
     )
 }

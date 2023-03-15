@@ -1,6 +1,7 @@
-import { ChangedResumeData } from 'types/core'
+import { LocaleData } from 'types/locals'
+import { EMAIL, GITHUB, SKILLS, TELEGRAM, TELEPHONE } from '../common'
 
-export const en: ChangedResumeData = {
+export const en: LocaleData = {
     words: {
         resume: 'Resume',
         name: 'Name',
@@ -26,6 +27,10 @@ export const en: ChangedResumeData = {
         name: 'Alexander Solyar',
         birthday: 'January 4, 1999',
         place: 'Kyiv region',
+        github: GITHUB,
+        telephone: TELEPHONE,
+        telegram: TELEGRAM,
+        email: EMAIL,
     },
     languages: [
         {
@@ -41,11 +46,12 @@ export const en: ChangedResumeData = {
             level: 'B1',
         },
     ],
-    description: {
+    summary: {
         title: 'React FrontEnd Developer',
         salary: 'Expected salary from $1000',
         text: `I have been developing for 8 years. Independently studied various programming languages, such as Lua, Haskell, C++, Python. At the moment I settled on Javascript and Typescript. I know the peculiarities of languages thoroughly, because I once wrote my superstructure with typification for Lua. I just like it. I am quite confident in OOP, REST API, SOLID and other architectural principles, as well as patterns. I am looking for a place where it will be interesting and easy to work, with the opportunity to improve their skills in any direction. Able to learn quickly and constantly engage in self-education.`,
     },
+    skills: SKILLS,
     educations: [
         {
             start: 'September 2006',

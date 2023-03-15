@@ -1,6 +1,7 @@
-import { ChangedResumeData } from 'types/core'
+import { LocaleData } from 'types/locals'
+import { EMAIL, GITHUB, SKILLS, TELEGRAM, TELEPHONE } from '../common'
 
-export const ua: ChangedResumeData = {
+export const ua: LocaleData = {
     words: {
         resume: 'Резюме',
         name: "Ім'я",
@@ -26,6 +27,10 @@ export const ua: ChangedResumeData = {
         name: 'Олександр Соляр',
         birthday: '4 Cічня 1999',
         place: 'Київська обл.',
+        github: GITHUB,
+        telephone: TELEPHONE,
+        telegram: TELEGRAM,
+        email: EMAIL,
     },
     languages: [
         {
@@ -41,11 +46,12 @@ export const ua: ChangedResumeData = {
             level: 'B1',
         },
     ],
-    description: {
+    summary: {
         title: 'React FrontEnd Developer',
         salary: 'Очікувана зарплата від 1000$',
         text: `Я розробляю вже протягом 8 років. Самостійно вивчав різні мови програмування, такі як Lua, Haskell, C++, Python. В данний момент зупинився на Javascript і Typescript. Особливості мов знаю досконально, оскільки колись писав свою надбудову з типізацією для Lua. Мені це просто подобається. Достатньо впевнено орієнтуюсь в ООП, REST API, SOLID та інших архітектурних принципах, а також паттернах. Шукаю місце, де буде цікаво і легко працювати, з можливістю покращення своїх навиків, у будь-яких напрямках. Здатний швидко вчитися і постійно займатися самоосвітою.`,
     },
+    skills: SKILLS,
     educations: [
         {
             start: 'Вересень 2006',

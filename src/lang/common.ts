@@ -1,13 +1,11 @@
-import { CommonPersonalData, SkillData, SkillLevel } from 'types/core'
+import { SkillData, SkillLevel } from 'types/core'
 
-export const commonPersonalData: CommonPersonalData = {
-    github: 'lehaisanya',
-    telephone: '+380675976212',
-    telegram: 'lehaisanya',
-    email: 'lehaisanya@gmail.com',
-}
+export const GITHUB = 'lehaisanya'
+export const TELEPHONE = '+380675976212'
+export const TELEGRAM = 'lehaisanya'
+export const EMAIL = 'lehaisanya@gmail.com'
 
-export const skills: SkillData[] = [
+export const SKILLS: SkillData[] = [
     {
         name: 'JavaScript (ES2020)',
         level: SkillLevel.Professional,
