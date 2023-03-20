@@ -14,7 +14,7 @@ export const ExperienceSection = () => {
                 {words.experience}
             </TitleLine>
 
-            {experience.map((exp, i) => (
+            {experience.reverse().map((exp, i) => (
                 <ExperienceItem key={i} experience={exp} />
             ))}
         </Box>
