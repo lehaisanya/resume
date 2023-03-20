@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { Avatar, Box, Heading, Link, SimpleGrid } from '@chakra-ui/react'
-import avatar from 'assets/avatar.jpg'
 import { InfoLine } from 'components/InfoLine'
 import { UserIcon } from 'icons/User'
 import { useResumeData } from 'hooks/useResumeData'
@@ -10,9 +9,11 @@ import { SmartphoneIcon } from 'icons/Smartphone'
 import { GithubIcon } from 'icons/Github'
 import { PaperPlaneIcon } from 'icons/PaperPlane'
 import { EnvelopIcon } from 'icons/Envelop'
+import avatar from 'assets/avatar.jpg'
 
 export const Sidebar = () => {
     const { words, personal, languages } = useResumeData()
+
     return (
         <Box padding={{ base: '0px', md: '10px' }}>
             <Box margin="10px">

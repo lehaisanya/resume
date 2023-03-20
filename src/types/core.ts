@@ -1,46 +1,19 @@
-export interface WordsData {
-    resume: string
+export interface PersonalData {
     name: string
     birthday: string
     place: string
-    adress: string
-    telephone: string
-    telegram: string
-    email: string
-    personalData: string
-    education: string
-    experience: string
-    skills: string
-    projects: string
-    testTask: string
-    uses: string
-    languages: string
-    more: string
-    view: string
-    inProgress: string
-}
-
-export interface CommonPersonalData {
     github: string
     telephone: string
     telegram: string
     email: string
 }
 
-export interface ChangedPersonalData {
-    name: string
-    birthday: string
-    place: string
-}
-
-export interface PersonalData extends CommonPersonalData, ChangedPersonalData {}
-
 export interface LanguageData {
     name: string
     level: string
 }
 
-export interface DescriptionData {
+export interface SummaryData {
     title: string
     salary: string
     text: string
@@ -55,12 +28,13 @@ export interface EducationData {
 }
 
 export interface ExperienceData {
-    title: string
+    position: string
+    place: string
     period: string
     description: string
 }
 
-export enum SkillLevel {
+export const enum SkillLevel {
     Basic = 1,
     Confident = 2,
     Advanced,
@@ -87,27 +61,4 @@ export interface TestTaskData {
     technologies: string[]
     repository: string
     viewLink?: string
-}
-
-export interface ChangedResumeData {
-    words: WordsData
-    personal: ChangedPersonalData
-    languages: LanguageData[]
-    description: DescriptionData
-    educations: EducationData[]
-    experience: ExperienceData[]
-    projects: ProjectData[]
-    testTasks: TestTaskData[]
-}
-
-export interface ResumeData {
-    words: WordsData
-    personal: PersonalData
-    languages: LanguageData[]
-    description: DescriptionData
-    educations: EducationData[]
-    skills: SkillData[]
-    experience: ExperienceData[]
-    projects: ProjectData[]
-    testTasks: TestTaskData[]
 }

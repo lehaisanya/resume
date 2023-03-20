@@ -18,7 +18,7 @@ export const Card: FC<CardProps> = ({ title, links, children }) => {
             borderColor="gray.200"
             transitionDuration="0.5s"
             _hover={{
-                boxShadow: '0px 0px 8px -3px #000',
+                boxShadow: '0px 0px 20px -3px #5003AD',
             }}
         >
             <Flex

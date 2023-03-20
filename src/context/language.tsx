@@ -1,9 +1,9 @@
 import React, { FC, useContext, useState } from 'react'
-import { LangType } from 'types'
+import { Locale } from 'types/locals'
 
 interface LanguageContextProps {
-    language: LangType
-    changeLanguage: (lang: LangType) => void
+    language: Locale
+    changeLanguage: (lang: Locale) => void
 }
 
 export const LanguageContext = React.createContext<LanguageContextProps>(
@@ -13,7 +13,7 @@ export const LanguageContext = React.createContext<LanguageContextProps>(
 LanguageContext.displayName = 'LanguageContext'
 
 export const LanguageProvider: FC = ({ children }) => {
-    const [language, changeLanguage] = useState<LangType>('ua')
+    const [language, changeLanguage] = useState<Locale>('ua')
 
     return (
         <LanguageContext.Provider
