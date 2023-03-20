@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Box, SimpleGrid, BoxProps } from '@chakra-ui/react'
+import { mainGradient } from 'theme/gradients'
 
 interface SegmentedProgressProps extends BoxProps {
     segments: number
@@ -18,7 +19,7 @@ export const SegmentedProgress: FC<SegmentedProgressProps> = ({
             {segmentsList.map((segment) => (
                 <Box
                     key={segment}
-                    backgroundColor={segment <= value ? 'blue.400' : 'gray.200'}
+                    bg={segment <= value ? mainGradient.skills : 'gray.200'}
                 />
             ))}
         </SimpleGrid>

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Box, Text } from '@chakra-ui/react'
-import { SegmentedProgress } from './SegmentedProgress'
+import { SegmentedProgress } from 'components/SegmentedProgress'
 import { SkillData } from 'types/core'
 
 interface SkillProps {

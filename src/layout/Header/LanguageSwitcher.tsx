@@ -1,9 +1,8 @@
 import React from 'react'
 import { RadioButton, RadioButtons } from 'components/RadioButtons'
 import { useLanguage } from 'context/language'
-import { LangType } from 'types'
-
-const languages = ['ua', 'ru', 'en']
+import { languageNames } from 'lang'
+import { Locale } from 'types/locals'
 
 export const LanguageSwitcher = () => {
     const { language, changeLanguage } = useLanguage()
@@ -13,9 +12,9 @@ export const LanguageSwitcher = () => {
             colorScheme="blue"
             size="sm"
             value={language}
-            onChange={(newLanguage) => changeLanguage(newLanguage as LangType)}
+            onChange={(newLanguage) => changeLanguage(newLanguage as Locale)}
         >
-            {languages.map((option) => (
+            {languageNames.map((option) => (
                 <RadioButton key={option} value={option}>
                     {option.toUpperCase()}
                 </RadioButton>

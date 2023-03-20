@@ -1,9 +1,9 @@
 import { useLanguage } from 'context/language'
-import { ResumeData } from 'types/core'
-import { langs } from 'data'
+import { languages } from 'lang'
+import { LocaleData } from 'types/locals'
 
-export function useResumeData(): ResumeData {
+export function useResumeData(): LocaleData {
     const { language } = useLanguage()
 
-    return langs[language]
+    return languages[language]
 }
