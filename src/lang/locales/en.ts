@@ -54,12 +54,6 @@ export const en: LocaleData = {
     skills: SKILLS,
     educations: [
         {
-            start: 'September 2006',
-            end: 'May 2014',
-            name: 'Incomplete secondary education',
-            place: 'Glevakhiv Secondary School №1 I-III degrees',
-        },
-        {
             start: 'September 2014',
             end: 'May 2018',
             name: 'Junior Specialist - Software Design',
@@ -74,19 +68,22 @@ export const en: LocaleData = {
     ],
     experience: [
         {
-            title: 'M.E.Doc - Technical support worker',
-            period: '3 months',
-            description: `To work, it was necessary to know the logic of the M.E.Doc program to be able to solve customer problems very quickly and immediately diagnose the possible cause of the problem with further explanation of its solution.`,
-        },
-        {
-            title: 'Crystall ISP - System Administrator',
+            position: 'System Administrator',
+            place: 'Crystall ISP',
             period: '2 years',
             description: `Wrote scripts on Node.js to speed up some work. Wrote my own console client for the telnet protocol, with syntax highlighting and other features. He also wrote configuration templates for devices (switch, olts, etc.) on the Pug template engine. He left behind a database of ready-made templates.`,
         },
         {
-            title: 'AzSoft - Frontend Developer (React)',
+            position: 'Frontend Developer (React)',
+            place: 'AzSoft',
             period: '1 year',
             description: `During his work he managed to visit several projects. Initially, worked on a charting project with the mxGraph library on Angular, redesigned data structures, and fixed bugs. After that worked only with React. I visited a project where I had to create user interfaces, animate game panels and so on. The last project was set up by myself, it also had to build sequence diagrams, and I chose the more modern React Flow library. Developed architecture and subsequently conducted dialogues to improve architecture, planned refactoring and actively raised issues of project improvement. During work improved development skills with React and Typescript, got acquainted with new libraries, such as: Chakra UI, MobX, React Flow, React Hook Form.`,
+        },
+        {
+            position: 'Frontend Developer (React)',
+            place: 'Forex Tester',
+            period: '3 місяці',
+            description: '',
         },
     ],
     projects: [
@@ -118,19 +115,6 @@ export const en: LocaleData = {
             description: `Console client for telnet protocol. The work of a system administrator requires a lot of routine actions. So I decided to automate the most common action: authorization on the device. Whenever possible I tried to fill the project with new features. So there was a backlight of the text: different numbers, dates, serial numbers, etc. There is also a list of devices where you can immediately select the desired one without entering its IP. And there was a list of users, where you could also select the user from whom we want to log in to the device.`,
             technologies: ['Node.js'],
             repository: 'https://github.com/lehaisanya/telnet-my',
-        },
-        {
-            name: 'Articles Here',
-            description: `Online article editor. Test project for portfolio. In it I demonstrate my knowledge of React/Redux technologies. A full-fledged project at MERN.`,
-            technologies: [
-                'React',
-                'Redux',
-                'MongoDB',
-                'Node.js',
-                'Typescript',
-                'Antd',
-            ],
-            inProgress: true,
         },
     ],
     testTasks: [

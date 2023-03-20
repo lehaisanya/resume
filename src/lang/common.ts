@@ -15,11 +15,11 @@ export const SKILLS: SkillData[] = [
         level: SkillLevel.Professional,
     },
     {
-        name: 'Typescript',
+        name: 'HTML5/CSS3',
         level: SkillLevel.Professional,
     },
     {
-        name: 'Git',
+        name: 'Typescript',
         level: SkillLevel.Professional,
     },
     {
@@ -27,7 +27,7 @@ export const SKILLS: SkillData[] = [
         level: SkillLevel.Professional,
     },
     {
-        name: 'Redux',
+        name: 'Redux/Toolkit',
         level: SkillLevel.Advanced,
     },
     {
@@ -35,20 +35,16 @@ export const SKILLS: SkillData[] = [
         level: SkillLevel.Professional,
     },
     {
-        name: 'HTML5/CSS3',
+        name: 'SASS/SCSS',
+        level: SkillLevel.Advanced,
+    },
+    {
+        name: 'Git',
         level: SkillLevel.Professional,
     },
     {
-        name: 'SASS',
-        level: SkillLevel.Advanced,
-    },
-    {
-        name: 'MongoDB',
-        level: SkillLevel.Advanced,
-    },
-    {
         name: 'Webpack',
-        level: SkillLevel.Confident,
+        level: SkillLevel.Advanced,
     },
     {
         name: 'REST API',
@@ -57,6 +53,10 @@ export const SKILLS: SkillData[] = [
     {
         name: 'SOLID',
         level: SkillLevel.Advanced,
+    },
+    {
+        name: 'Refactoring',
+        level: SkillLevel.Professional,
     },
     {
         name: 'Lua',

@@ -8,6 +8,7 @@ import { ProjectsSection } from './sections/Projects'
 import { TestTaksSection } from './sections/TestTasks'
 import { useResumeData } from 'hooks/useResumeData'
 import { usePageTitle } from 'hooks/usePageTitle'
+import { Section } from 'layout/Section'
 
 export const ResumePage = () => {
     const { words, personal } = useResumeData()
@@ -15,18 +16,30 @@ export const ResumePage = () => {
     usePageTitle(`[${words.resume}] ${personal.name}`)
 
     return (
-        <Box padding="15px">
-            <DescriptionSection />
+        <Box padding={{ base: '15px', md: '25px' }}>
+            <Section>
+                <DescriptionSection />
+            </Section>
 
-            <EducationSection />
+            <Section>
+                <SkillsSection />
+            </Section>
 
-            <ExperienceSection />
+            <Section>
+                <ExperienceSection />
+            </Section>
 
-            <SkillsSection />
+            <Section>
+                <EducationSection />
+            </Section>
 
-            <ProjectsSection />
+            <Section>
+                <ProjectsSection />
+            </Section>
 
-            <TestTaksSection />
+            <Section>
+                <TestTaksSection />
+            </Section>
         </Box>
     )
 }

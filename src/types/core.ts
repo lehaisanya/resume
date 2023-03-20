@@ -28,7 +28,8 @@ export interface EducationData {
 }
 
 export interface ExperienceData {
-    title: string
+    position: string
+    place: string
     period: string
     description: string
 }
